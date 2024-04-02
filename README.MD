@@ -14,8 +14,7 @@
 6. [Type Upgrades](chapters/type_upgrades.md)
 7. [Strong vs. Static Typing](chapters/strong_vs_static_typing.md)
 8. [Self Documenting Code](chapters/self_documenting_code.md)
-9. [Static Type Checking](chapters/static_type_checking.md)
-10. [Chapter Assessment]()
-11. [More resources about types]()
+9. [Static Type Checking TODO](chapters/static_type_checking.md)
+10. [Chapter Assessment TODO]()
 
 

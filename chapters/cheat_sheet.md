@@ -1,5 +1,7 @@
 # Cheat Sheet
 
+This is a reference to how to declare various types in Python. Don't worry if you haven't gone over some of these types. You can refer back to this page at a later time.
+
 ```py
 # For most types, just use the name of the type in the annotation
 # Note that mypy can usually infer the type of a variable from its value,

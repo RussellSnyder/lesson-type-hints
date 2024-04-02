@@ -58,18 +58,22 @@ The opposite of statically typed is dynamically typed. Python is dynamically typ
 CHECK YOUR UNDERSTANDING
 
 1. What is the opposite of a dynamic programming language?
+- Weak
+- Strong
+- Static (Answer)
+- Stiff
 
 2. Can a language be strongly typed but not static?
 - No, impossible
 - Yes, that's Python! (Answer)
 
-3. What type are most modern languages?
+1. What type combination is most common in modern languages?
 - Strong and Statically typed (Answer)
 - Strong and Dynamically typed
 - Weak and Statically typed
 - Weak and Dynamically typed
 
-4. Which of the following apply to Typescript?
+1. Which of the following applies to Typescript? (Pick 2)
 - [ ] Strongly typed 
 - [x] Weakly typed
 - [x] Statically typed

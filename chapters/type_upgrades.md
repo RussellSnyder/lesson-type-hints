@@ -16,26 +16,10 @@ print(4 / 2)   # outputs float
 
 ## Why Type Upgrade and not Error?
 
-Why doesn't Python throw an error when adding an integer and a float like it does when adding a integer to a string? The answer is not so technical, it is simply a choice that the creators of Python have made.
+Why doesn't Python throw an error when adding an integer and a float like it does when adding a integer to a string? Well, the answer is not so technical. This is actually a language design choice the creators of Python have made. 
 
-## Make Your Own Type Upgrades If You Want
-
-Just as Python makes the decision to upgrade certain types, you can overload the  
-
-```py
-class AlwaysFloat(object):
-    def __init__(self, value):
-        self.value = float(value)
-
-    def __add__(self, other_value):
-        return self.value + other_value
-
-print(AlwaysFloat(2) + 3)
-# will always print a float even through only integers were input
-```
-
-EXCERISE
-Create a class that only returns integers when divided by another integer. Round the number down is a float is received.
+> Note Not Everything in Tech is Technical
+> Some reasons why code works the way it does is based on historical limitations on computers. But sometimes, it's just a design choice. A computer language, like a real language, is a changing and evolving system. New technology and trends rise and some languages choose to include those features while other do not.
 
 
 CHECK YOUR UNDERSTANDING
@@ -57,3 +41,9 @@ CHECK YOUR UNDERSTANDING
 -  Python upgrade the string to an integer
 -  Python downgrades the integer to a string
 -  The string '12' is printed 
+
+4. Why does Python use Type Upgrades
+- [x] To enable developers to be as productive as possible
+- [ ] There are technical limitations forcing type upgrades
+- [ ] Integers are 'first class' citizens allowing for upgrades
+- [ ] Python does not use type upgrades

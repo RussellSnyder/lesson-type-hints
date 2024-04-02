@@ -14,7 +14,7 @@ Typing can give similar information as code comments but in a way that machines 
 
 ## Type Safety
 
-Type safety refers to the degree in which a programming language enforces what operations can be performed on what types of data. Although often confounded, there are two ways to enforce type safety: runtime and compile time.
+Type safety refers to the degree in which a programming language enforces what operations can be performed on what types of data.
 
 ## Inferred vs. Explicit Typing
 
@@ -35,12 +35,6 @@ Static code analysis refers to the ability to check code without running it. Thi
 Although static analysis cannot definitely assess whether a codebase is good or bad, it can suggest ways to improve and contribute metrics to assess a codebase's overall health.
 
 Static code analysis can also help developers catch bugs early in the code creation process. Instead of waiting to run into errors when running code, static code analysis will show the developers where potential error or optimizations can occur *while* they are writing code. We'll see examples of this soon.
-
-## Code Linting
-
-Code linting is the automated checking of your source code for programmatic and stylistic errors. For developers, code linting errors show a red squiggle under code that it thinks will fail. Some companies will not allow code to be checked into their code base that contain linting errors.
-
-Code linting is only be possible because of the static analysis happening on a code base. It's like the GUI through which static analysis shows errors to a developer. Without code linting, errors caught by static analysis tools would be invisible!
 
 CHECK YOUR UNDERSTANDING
 
@@ -63,10 +57,3 @@ CHECK YOUR UNDERSTANDING
 - [x] It is a tool to help developers catch bugs without running a program
 - [ ] It allows interpreted code to run in the cloud
 - [ ] It ensures no malicious code is checked into a codebase
-
-4. How is code linting useful for developers?
-
--  [x] It allows developers to see errors in their code before running
--  [x] It allows static analysis tools to visualize errors to a developer
--  [x] It ensures a basic level of code quality
--  [ ] It deletes ugly code in a code base
