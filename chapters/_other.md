@@ -1,0 +1,1 @@
+There is certainly a trend of modern languages moving towards strongly typed systems. The rising popularity of Typescript and [proposals to add type annotations](https://github.com/tc39/proposal-type-annotations) into an upcoming version of javascript suggests that it's just a matter of time before typing systems will be everywhere.
