@@ -22,4 +22,27 @@ EXCERISE
 Create a class that only returns integers when divided by another integer. Round the number down is a float is received.
 
 
+## VS Code
 
+In your settings.json file (`ctr+shift+p` and type `settings` to find the command `Preferences: Open User Settings (JSON)). Once open, add a new line with the following setting:
+
+```json
+{
+    "python.analysis.typeCheckingMode": "basic"
+}
+```
+
+Now you a red squiggle will appear under code that violates typing.
+
+TODO: Instructions for other IDEs
+
+
+## Why Doesn't Everybody use Typing?
+
+the main opponents of typing say that there is a loss in productivity when using types. Instead of focusing on the run time product, too much time is spent doing 'type gymnastics'.
+
+While this may be true in some situations, there are some situations where types are especially helpful:
+
+- Building a library to be imported into other projects
+- On large, open-source code bases to enable automated checks
+- When code quality is very important (e.g. medical devices)

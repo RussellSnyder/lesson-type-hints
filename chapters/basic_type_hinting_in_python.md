@@ -1,71 +1,57 @@
-# Type "Hinting" in Python
-
-![Wonka about to turn you into a blueberry](/images/memes/type_hinting_meme.jpg)
-
-## Hinting - not Checking!
-
-Although Python supports explicit typing, it is referred to as "Type Hinting" because it does not effect the the runtime or compile time environment by default. We'll look later into how to change this and why we would want to.
-
-> [WARNING] The word *Hinting* in "Type Hinting" is very important! The typing system in python does not effect the runtime program which is unexpected if you've ever learned a strongly typed langauge before.
+# Basic Type Hinting in Python
 
 ## Syntax in Python
 
-The syntax for type hinting in Python is simple. You just add a colo after aa variable and give the type like this:
+The syntax for type hinting in Python is simple. You just add a colon after a variable and give the type like this:
 ```py
 foo: int = 5
 bar: str = "Python rules!"
-isOldEnoughToParty: bool
+is_old_enough_to_party: bool
 ```
 
-> type hints in Python are very similar to how types are declared in other language
+> [WARNING] Examples must be done in your local IDE as type hinting is not currently supported in the code environment online.
 
-It might not be clear right now why we are explicilty adding types because these examples are simple. But take our `isOldEnoughToParty` variable. It's currently undefined but will be set later in the program in an if statement like so:
+It might not be clear right now why we are explicitly adding types because these examples are simple. But take our `is_old_enough_to_party` variable. It's currently undefined but will be set later in the program in an if statement like so:
 
 ```py
-if age 18:
-    isOldEnoughToParty = False
+if age >= 18:
+    is_old_enough_to_party = False
 else
-    isOldEnoughToParty = True
+    is_old_enough_to_party = True
 ```
 
-Without the explicit type annotation, `isOldEnoughToParty` could have been set to a string or integer without the intepreter showing an error. Although a properly named variable is often enough for a developer to understand the type of a variable, we'll look at times when it can be ambiguous soon.
+Without the explicit type annotation, `is_old_enough_to_party` could have been set to a string or integer without the interpreter showing an error. Although a properly named variable is often enough for a developer to understand the type of a variable, we'll look at times when it can be ambiguous soon.
 
-## The Big Gotcha
+> type hints in Python are very similar to how types are declared in other languages. So if you mater type hinting, you can quickly learn other typed languages!
 
-It bears repeating: the Python runtime does not enforce function and variable type annotations!
+> Let's try it!
 
-Let's look at some code examples:
-
+Annotate the following code (about) with the appropriate types:
 ```py
-foo: int = 5
-print(type(foo))
+first_name = "Joe"
+last_name = "Quimby"
+age = 46
+weight_in_kg = 91.7
+is_mayor = True
 ```
-prints: `<class 'int'>`
 
-```py
-foo: float = 5
-print(type(foo))
-```
-prints: `<class 'int'>`
-
-If you are familiar with any other typed languages, you would expect foo to be a float in the second example. However, the type system in python DOES NOT CONVERT the variable to the type it's defined as. This is why it's referred to as type **hinting**
 
 CHECK YOUR UNDERSTANDING
 
-which of the following will print?
-```py
-foo: int = "type hinting gotcha"
-print(type(foo))
-```
-- `undefined`
-- `<class 'string'>`
-- `<class 'float'>`
-- `<class 'int'>`  (ANSWER)
+1. Why is it a good idea to give an uninitialized variable a type? (like `is_old_enough_to_party` earlier)
+- [x] It reduces the chance that a wrong type will be set later
+- [x] It makes your code easier to understand
+- [x] So the interpreter knows what type the variable is without assigning a value
+- [ ] This makes the variable less dynamic and should be avoided
 
-Why is the typing system called type "hinting" in Python?
+1. An error is being caused by the variable weight being stored as an integer instead of a float. How can we help other developers and the interpreter undertand which type it should be?
+- [x] use a type hint like so: `weight: float`
+- [ ] use a type hint like so: `weight: int or float`
+- [ ] use a type hint like so: `weight: int`
+- [ ] use a type hint like so: `weight: float not int`
 
-- Because the word `type` is a reserved word in Python
-- Because other programming languages already use the word `type` and Python wants to be different.
-- Because type hinting does not effect the runtime program (ANSWER)
-- Because type suggesting sounds funny
-
+1. Which is the correct syntax for type hints in Python?
+- `str my_variable`
+- `my_variable => str`
+- `my_variable: str` (Answer)
+- `str(my_variable)`

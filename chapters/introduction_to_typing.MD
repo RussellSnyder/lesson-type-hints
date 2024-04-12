@@ -10,31 +10,33 @@ Typing is a way to give either your compiler, interpreter or another developer m
 - What shape data will be
 - What type of arguments a function takes and what type does it return
 
-Typing can give similar information as code comments but in a way that machines (compiler/interpreter) can also understand. ****
+## Why is Typing Helpful?
 
-## Type Safety
+Typing can help catch bugs early in the development process. When variables are typed, Python can highlight errors in your IDE **before** running your program. This saves time (and headaches) debugging programs later in the development process.
 
-Type safety refers to the degree in which a programming language enforces what operations can be performed on what types of data.
+The classic example in Python is adding a string to an integer:
 
-## Inferred vs. Explicit Typing
+```py
+foo = 5
+bar = '10'
+print(foo + bar)
+```
 
-Python uses inferred types to determine the type of a variable. This means that the program knows that when you write `foo = 5` that `foo` is an integer.
+This example will fail when running your program as a string cannot be added to an integer in Python. However, with type checking on, your IDE will highlight the error like this:
 
-Languages that use explicit types (early Java) require you to write what type a variable is *before* setting the variable. 
+![error highlighting in Python](/images/code_snippets/error_highlighting.png)
 
-With this said, there are times when neither python nor your IDE can infer a variables type correctly. This is where explicit typing (known in the Python world as "type hinting"), can really help.
+When hovering over the highlighted code, we even get the exact error that this code has:
 
-## Static Code Analysis
+![error highlighting in Python](/images/code_snippets/error_fix_suggestion.png)
 
-Static code analysis refers to the ability to check code without running it. This is especially useful for large code bases where it would take a long time to run every branch of code but quality is still important. Explicit types help greatly with static code analysis as it enables the interpreter to know what types variables and functions return without executing the code.
+Not only does our IDE tell us there is an error, but it tells us how to fix there error all without running our program!
 
-> [Did You Know?] Static code analysis is sometimes viewed as the most important part of code testing. In the Kent Dodd's testing trophy strategy, all other types of tests rest on the foundation of static code analysis
-![testing trophy from Kent C Dodds](/images/trophy_testing.webp)
+> Vocabulary "Type Safety"
+> Refers to the degree in which a programming language enforces what operations can be performed on what types of data.
+> Javascript is less type safe than Python because it allows integers and strings to be added together by *implicitly converting* the integer to a string. Java is more type safe than Python because it uses a static typing systems.
+> Type safety is a continuum and does not mean one language is better or worse than another: just different.
 
-
-Although static analysis cannot definitely assess whether a codebase is good or bad, it can suggest ways to improve and contribute metrics to assess a codebase's overall health.
-
-Static code analysis can also help developers catch bugs early in the code creation process. Instead of waiting to run into errors when running code, static code analysis will show the developers where potential error or optimizations can occur *while* they are writing code. We'll see examples of this soon.
 
 CHECK YOUR UNDERSTANDING
 
@@ -45,15 +47,10 @@ CHECK YOUR UNDERSTANDING
 - [x] To help yourself in 3 months understand your code
 - [x] To help the compiler understand your code
 
-2. Which of the following is an example of 'inferred typing' in Python?
+2. What would happen when you execute a Python program where an integer is added to a string?
 
-- `foo = 5` the Python interpreter thinks foo is a string
-- `foo = 5` the Python interpreter thinks foo is an integer [ANSWER]
-- `bar = 2.0` the python interpreter thinks bar is a string
+- The program would convert the integer to a string to not fail
+- The program would convert the string to an integer to not fail
+- The program would throw an error only when running your code [Answer] 
+- The program would not compile because of the error
 
-3. Why is static code analysis helpful?
-
-- [x] It is a metric to assess the health of a codebase
-- [x] It is a tool to help developers catch bugs without running a program
-- [ ] It allows interpreted code to run in the cloud
-- [ ] It ensures no malicious code is checked into a codebase
