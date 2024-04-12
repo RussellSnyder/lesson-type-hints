@@ -2,7 +2,7 @@
 
 Sometimes a single type isn't enough for a variable or you want to make sure the consumer of a function handles the case when None is returned. Type hinting has your back.
 
-## Union - When Multiple Types Are Returned
+## Union - When a Variable can be Multiple Types
 
 ![Why pick just one type!?](/images/memes/string_int_union.jpg)
 
@@ -34,9 +34,9 @@ But if we check the type, we can handle the return value accordingly. In this ca
 
 ![casting the float so that we don't get errors](/images/code_snippets/is_float.png)
 
-> Note - For The Future
-> Usually we would use a class (like `Exception`) for error messages like in the previous example. Class based error messages allows use to separate those messages from normal strings
-> Also, `raise` would usually be called to allow the error to bubble up to a centralized error handling system.
+> Note - For The Future!
+> Usually we would use a class (like `Exception`) for error messages like in the previous example. Class based error messages allows use to separate those messages from normal strings.
+> Also, `raise` would usually be called to allow errors to bubble up to a centralized error handling system. But that's for another lesson!
 
 ## Exercise
 
